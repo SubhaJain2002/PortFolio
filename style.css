@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+}
+.Portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+
+}
+.left-container, .right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-container{
+    background-color: #262525;
+    width: 70%;
+    padding-left: 3rem;
+
+}
+.right-container{
+    background: linear-gradient(-45deg, #3877ff, #262525 70%);
+    width: 30%;
+    
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.8rem;
+    
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+.content{
+    margin-left: 4rem;
+
+}
+.content .intro{
+    font-size: 1.5rem;
+    color: white;
+}
+.content .intro span{
+    color: #5DB9EE;
+}
+.content h1{
+    font-size: 4rem;
+    color: #5DB9EE;
+} 
+.content .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+.btn-container button{
+    border: .1rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: 5s ease;
+
+}
+button:nth-child(1){
+    background: #5DB9EE;
+    color: #262525;
+}
+button:nth-child(2){
+    background: transparent;
+    color: #5DB9EE;
+    margin: 2rem;
+}
+
+button:nth-child(1):hover{
+    background: transparent;
+    color: #5DB9EE;
+}
+button:nth-child(2):hover{
+    background: #5DB9EE;
+    color: #262525;
+}
+button:nth-child(1) a{
+    color: #262525;
+    text-decoration: none;
+}
+button:nth-child(1) a:hover{
+    color: #5DB9EE;
+    transition: 5s ease;  
+}
+.btn-container button i{
+    position: absolute;
+    background-color:#5DB9EE;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #262525;
+    color: black;
+}
+.btn-container button i:hover{
+    background-color:#5DB9EE;
+    color: white;
+}
+
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(white,#3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+
+}
+.circle:nth-child(2){
+    background-image: url("photo2.jpeg");
+    width: 30rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1rem solid white;
+    box-shadow: 0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877ff,
+    inset 0 0 2rem #3877ff;
+    
+}
+.navlist li a::after, .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+
+}
+.navlist li a:hover::after, .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* About */
+.content1 span{
+    color: #5DB9EE;
+}
+.content1 h1{
+    font-size: 4rem;
+    color: #fff;
+} 
+.content1 h3{
+    font-size: 3rem;
+    color: #5DB9EE;
+} 
+.content1 .intro1{
+    font-size: 1.1rem;
+    color: white;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+.content1 .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+.right-contain{
+    background: #262525;
+    width: 30%;
+    
+}
+
+/* PROJECT*/
+.content h2{
+    font-size: 3rem;
+    color: #fff;
+} 
+.content h5{
+    font-size: 2rem;
+    color: #5DB9EE;
+} 
+/*CONTACT ME */
+.contact{
+    min-height: 100vh;
+    padding: 50px 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #262525;
+    background-size: cover;
+
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+}
+.contact .content p{
+    font-weight: 300;
+    color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contact-info .box{
+   position: relative;
+   padding: 20px 0;
+   display: flex;
+}
+.container .contact-info .box .icon a{
+    color: #262525;
+}
+.container .contact-info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    font-size: 22px;  
+}
+.container .contact-info .box .icon:hover{
+    background: #5DB9EE;
+    color: #262525;
+
+}
+.container .contact-info .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 300;  
+}
+.container .contact-info .box .text h3{
+    font-weight: 300;
+    color: #5DB9EE;
+}
+.contactFrom{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactFrom h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactFrom .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.contactFrom .inputBox input,
+.contactFrom .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+
+}
+.contactFrom .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactFrom .inputBox input:focus ~ span,
+.contactFrom .inputBox input:valid ~ span,
+.contactFrom .inputBox textarea:focus ~ span,
+.contactFrom .inputBox textarea:focus ~ span{
+    color: #5DB9EE;
+    font-size: 12px;
+    transform: translateY(-20px);
+
+}
+.contactFrom .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
